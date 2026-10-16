@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="8 个生活情境，发现你的稀有动物人格。">
+  <title>测测你是哪种稀有动物人格</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar" aria-label="网站导航">
+      <a class="brand" href="#home" data-action="home">RARE / ANIMAL</a>
+      <span class="issue">FIELD GUIDE · 08</span>
+    </header>
+
+    <main id="app" tabindex="-1">
+      <section id="home" class="screen home-screen is-active" aria-labelledby="home-title">
+        <div class="home-copy">
+          <p class="eyebrow">THE RARE ANIMAL PERSONALITY TEST</p>
+          <h1 id="home-title">测测你是哪种<br><em>稀有动物人格</em></h1>
+          <p class="lead">你以为自己只是按习惯生活？换个角度看，那些微小的选择，可能早就暴露了你的动物底色。</p>
+          <div class="home-meta" aria-label="测试信息">
+            <span><strong>08</strong> 个生活情境</span>
+            <span><strong>12</strong> 种动物档案</span>
+            <span><strong>约 2</strong> 分钟</span>
+          </div>
+          <button class="primary-button" type="button" data-action="start">
+            <span>发现我的动物人格</span><span class="button-arrow" aria-hidden="true">↗</span>
+          </button>
+          <p class="micro-note">娱乐测试 · 没有标准答案 · 凭第一反应选择</p>
+        </div>
+        <div class="home-art" aria-hidden="true">
+          <div class="art-index">VOL. 01<br><span>UNCOMMON<br>SPECIES</span></div>
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="animal-seal">
+            <span class="seal-eyes"><i></i><i></i></span>
+            <span class="seal-nose"></span>
+            <span class="seal-caption">YOUR<br>INNER<br>SPECIES</span>
+          </div>
+          <div class="art-caption">OBSERVE<br>YOUR<br>INSTINCTS</div>
+          <div class="art-line line-a"></div>
+          <div class="art-line line-b"></div>
+        </div>
+      </section>
+
+      <section id="quiz" class="screen quiz-screen" aria-labelledby="question-title" hidden>
+        <div class="quiz-heading">
+          <div>
+            <p class="eyebrow">FIELD NOTES / <span id="question-number">01</span></p>
+            <div class="progress-track" aria-label="答题进度"><span id="progress-bar"></span></div>
+          </div>
+          <div class="progress-count"><span id="progress-current">01</span><span class="slash">/</span>08</div>
+        </div>
+        <div class="question-stage">
+          <p class="question-kicker" id="question-kicker">SCENE 01 · A SMALL DETOUR</p>
+          <h2 id="question-title"></h2>
+          <p class="question-hint">选一个最像你当下会做的决定</p>
+          <div id="options" class="options" role="list"></div>
+        </div>
+        <div class="quiz-footer"><span>RARE ANIMAL / ARCHIVE</span><span id="question-tag">INSTINCT</span></div>
+      </section>
+
+      <section id="reveal" class="screen reveal-screen" aria-live="polite" hidden>
+        <div class="reveal-card">
+          <p class="eyebrow">ARCHIVE UNLOCKED</p>
+          <div class="reveal-stamp">SPECIMEN<br><span>FOUND</span></div>
+          <p class="reveal-file">ANIMAL FILE <span id="reveal-number">00</span></p>
+          <h2 id="reveal-name">正在读取你的动物档案</h2>
+          <div class="reveal-rule"></div>
+          <p id="reveal-line">把八个瞬间拼起来，看看谁在里面眨眼。</p>
+        </div>
+      </section>
+
+      <section id="result" class="screen result-screen" aria-labelledby="result-name" hidden>
+        <div class="result-topline"><span class="eyebrow">PERSONALITY ARCHIVE</span><span id="result-date">FIELD GUIDE / 2026</span></div>
+        <div class="result-hero">
+          <div class="result-art" id="result-art" aria-hidden="true">
+            <div class="portrait-ring"></div><div class="portrait-ear ear-left"></div><div class="portrait-ear ear-right"></div>
+            <div class="portrait-face"><span class="portrait-eye eye-left"></span><span class="portrait-eye eye-right"></span><span class="portrait-muzzle"></span></div>
+            <span class="portrait-index" id="result-index">08</span>
+          </div>
+          <div class="result-identity">
+            <p class="result-file" id="result-file">ANIMAL FILE 08</p>
+            <h1 id="result-name">猫头鹰</h1>
+            <p id="result-tagline" class="result-tagline"></p>
+            <p id="result-summary" class="result-summary"></p>
+            <p id="result-summary-line" class="result-summary-line"></p>
+          </div>
+        </div>
+        <div class="result-rule"></div>
+        <div class="result-grid">
+          <article class="result-section result-description"><p class="section-label">01 / FIELD NOTES</p><p id="result-description"></p></article>
+          <article class="result-section"><p class="section-label">02 / TYPICAL MOVES</p><ul id="result-behaviors"></ul></article>
+          <article class="result-section"><p class="section-label">03 / HIDDEN ADVANTAGE</p><p id="result-strength"></p></article>
+          <article class="result-section contrast-section"><p class="section-label">04 / PLOT TWIST</p><p id="result-contrast"></p></article>
+        </div>
+        <div class="result-quote"><span class="quote-mark">“</span><p id="result-quote"></p><span class="quote-credit">— YOUR RARE ANIMAL FILE</span></div>
+        <div class="result-actions">
+          <button class="primary-button" type="button" data-action="share"><span>分享我的动物人格</span><span class="button-arrow" aria-hidden="true">↗</span></button>
+          <button class="text-button" type="button" data-action="restart">重新测试 <span aria-hidden="true">↻</span></button>
+        </div>
+        <p id="share-status" class="share-status" role="status" aria-live="polite"></p>
+        <p class="disclaimer">本测试为轻松娱乐创作，不构成心理诊断。你的结果只是今天的一个有趣切片。</p>
+      </section>
+    </main>
+  </div>
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
